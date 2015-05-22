@@ -6,9 +6,9 @@
                xmlns:xml="http://www.w3.org/XML/1998/namespace"
                jaxb:extensionBindingPrefixes="ai">
 
-    <jaxb:bindings schemaLocation="miabis.xsd" node="/xsd:schema">
+    <jaxb:bindings schemaLocation="sample-exchange-schema.xsd" node="/xsd:schema">
         <jaxb:schemaBindings>
-            <jaxb:package name="eu.bbmri_eric.miabis" />
+            <jaxb:package name="org.miabis.exchange.schema" />
         </jaxb:schemaBindings>
 <!--        <jaxb:bindings node="//xsd:element[@name='miabis']">
             <jaxb:bindings node=".//xsd:element[@name='disease']">
