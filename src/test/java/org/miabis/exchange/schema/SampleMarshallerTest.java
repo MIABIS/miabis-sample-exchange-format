@@ -1,6 +1,7 @@
 package org.miabis.exchange.schema;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -17,10 +18,10 @@ public class SampleMarshallerTest {
 
 	 @Test
 	 public void testMarshalRoot() throws JAXBException {
-		 Sample sample = new Sample();
+		 Miabis miabis = new Miabis();
 		 
-		 System.out.println("");
-		 marshaller.marshal(sample, System.out);
+		 System.out.println("\n");
+		 marshaller.marshal(miabis, System.out);
 	 }
 
 	 @Test
@@ -35,8 +36,12 @@ public class SampleMarshallerTest {
 	     Sample sample = new Sample();
 	     sample.setBiobank(biobank);
 	     
-	     System.out.println("");
-	     marshaller.marshal(sample, System.out);
+	     Miabis miabis = new Miabis();
+	     miabis.sample = new ArrayList<Sample>();
+	     miabis.sample.add(sample);
+	     
+	     System.out.println("\n");
+	     marshaller.marshal(miabis, System.out);
 	 }
 	 
 	 @Test
@@ -55,9 +60,12 @@ public class SampleMarshallerTest {
 	     Sample sample = new Sample();
 	     sample.setSamplecollection(sCollection);
 	     
-	     System.out.println("");
-	     marshaller.marshal(sample, System.out);
-		 
+	     Miabis miabis = new Miabis();
+	     miabis.sample = new ArrayList<Sample>();
+	     miabis.sample.add(sample);
+	     
+	     System.out.println("\n");
+	     marshaller.marshal(miabis, System.out);
 	 }
 	 
 	 @Test
@@ -76,8 +84,12 @@ public class SampleMarshallerTest {
 	     Sample sample = new Sample();
 	     sample.setStudy(study);
 	     
-	     System.out.println("");
-	     marshaller.marshal(sample, System.out);
+	     Miabis miabis = new Miabis();
+	     miabis.sample = new ArrayList<Sample>();
+	     miabis.sample.add(sample);
+	     
+	     System.out.println("\n");
+	     marshaller.marshal(miabis, System.out);
 		 
 	 }
 
@@ -90,6 +102,4 @@ public class SampleMarshallerTest {
 	 @AfterMethod
 	 public void afterMethod() throws Exception {
 	 }
-	
-	
 }
