@@ -748,41 +748,6 @@
         <xs:attribute name="id" type="xs:ID"/>
     </xs:complexType>
 
-    <xs:complexType name="ResearchInformation">
-        <xs:complexContent>
-            <xs:extension base="ContactInformation">
-                <xs:sequence>
-                    <xs:element name="juristicPerson" type="xs:string" minOccurs="0">
-                        <xs:annotation>
-                            <xs:documentation>
-                                MIABIS-2.0-23A: Textual string of letters
-                                denoting the juristic person e.g. a university,
-                                concern, county council etc.
-                            </xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                    <xs:element name="department" type="xs:string" minOccurs="0">
-                        <xs:annotation>
-                            <xs:documentation>
-                                MIABIS-2.0-23B: Department (e.g. division), or
-                                corresponding affiliation of the Contact person.
-                            </xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                    <xs:element name="ORCID" type="URL" minOccurs="0">
-                        <xs:annotation>
-                            <xs:documentation>
-                                MIABIS-2.0-23C: The persistent digital
-                                identifier that distinguishes researchers.
-                                As defined by ORCID.
-                            </xs:documentation>
-                        </xs:annotation>
-                    </xs:element>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
-
     <xs:complexType name="Biobank">
         <xs:sequence>
             <xs:element name="id" type="xs:ID">
@@ -850,20 +815,6 @@
                     <xs:documentation>
                         MIABIS-2.0-08: Textual string of letters with a
                         description about the biobank in English.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="sampleCollections" type="xs:IDREFS" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>
-
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="studies" type="xs:IDREFS" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>
-
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
@@ -988,27 +939,6 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="biobanks" type="xs:IDREFS" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>
-                        The biobanks that store samples for this collection.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="sampleCollections" type="xs:IDREFS" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>
-                        The subcollections of the sample collection.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="studies" type="xs:IDREFS" minOccurs="0">
-                <xs:annotation>
-                    <xs:documentation>
-                        The subcollections of the sample collection.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
@@ -1127,85 +1057,80 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="biobanks" type="xs:IDREFS">
-                <xs:annotation>
-                    <xs:documentation>
-                        The biobanks that store samples for this collection.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="studies" type="xs:IDREFS">
-                <xs:annotation>
-                    <xs:documentation>
-                        The studies that use samples from this collection.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="sampleCollections" type="xs:IDREFS">
-                <xs:annotation>
-                    <xs:documentation>
-                        The subcollections of the sample collection.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="miabis">
-        <xs:annotation>
-            <xs:documentation>
-                Root container for the MIABIS data.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="disease" type="Disease"
-                            minOccurs="0" maxOccurs="unbounded">
+	<xs:element name="sample">
+		<xs:annotation>  </xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="1">
+				<xs:element name="id" type="xs:ID">
+		        	<xs:annotation>
+		            	<xs:documentation>
+		                        MIABIS-39: Sample ID.
+		                </xs:documentation>
+		            </xs:annotation>
+		        </xs:element>
+		        <xs:element name="parentSampleId" type="xs:ID">
+		        	<xs:annotation>
+		            	<xs:documentation>
+		                        MIABIS-40: Parent Sample ID.
+		                </xs:documentation>
+		            </xs:annotation>
+		        </xs:element>
+		        <xs:element name="materialType" type="MaterialType" maxOccurs="15">
+		        	<xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-2.0-14: The biospecimen saved from a biological
+	                        entity for propagation e.g. testing, diagnostics,
+	                        treatment or research purposes.
+	                    </xs:documentation>
+                	</xs:annotation>
+		        </xs:element>
+		        <xs:element name="storageTemperature" type="Temperature" maxOccurs="6">
+	                <xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-2.0-15: The long term storage temperature a
+	                        the samples are stored after preparation.
+	                    </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            <xs:element name="sampledTime" type="xs:dateTime">
+	            	<xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-43: The time when the sample is taken according to ISO 8601 i.e. YYYYMMDDThhmm
+	                    	
+	                    	TODO : is not based on ISO
+	                    </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            <xs:element name="anatomicalSite" type="OntologyTerm">
+	                <xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-44: The anatomical position of the body where the solid sample was taken from.
+	                    </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            
+	            <xs:element name="biobank" type="Biobank">
                     <xs:annotation>
                         <xs:documentation>
-
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="contactInformation" type="ContactInformation"
-                            minOccurs="0" maxOccurs="unbounded">
-                    <xs:annotation>
-                        <xs:documentation>
-                             MIABIS-2.0-07:
-                        </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="researchInformation" type="ResearchInformation"
-                            minOccurs="0" maxOccurs="unbounded">
-                    <xs:annotation>
-                        <xs:documentation>
-                             MIABIS-2.0-23:
-                        </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-                <xs:element name="biobank" type="Biobank"
-                            minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="samplecollection" type="SampleCollection">
                     <xs:annotation>
                         <xs:documentation>
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="samplecollection" type="SampleCollection"
-                            minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="study" type="Study">
                     <xs:annotation>
                         <xs:documentation>
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="study" type="Study"
-                            minOccurs="0" maxOccurs="unbounded">
-                    <xs:annotation>
-                        <xs:documentation>
-                        </xs:documentation>
-                    </xs:annotation>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
+		    </xs:sequence>
+		</xs:complexType>
+	</xs:element>
 </xs:schema>
