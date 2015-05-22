@@ -1060,11 +1060,9 @@
         </xs:sequence>
     </xs:complexType>
 
-	<xs:element name="sample">
-		<xs:annotation>  </xs:annotation>
-		<xs:complexType>
-			<xs:sequence minOccurs="0" maxOccurs="1">
-				<xs:element name="id" type="xs:ID">
+	<xs:complexType name="Sample">
+		<xs:sequence>
+			<xs:element name="id" type="xs:ID">
 		        	<xs:annotation>
 		            	<xs:documentation>
 		                        MIABIS-39: Sample ID.
@@ -1132,5 +1130,24 @@
                 </xs:element>
 		    </xs:sequence>
 		</xs:complexType>
-	</xs:element>
+	
+	<xs:element name="miabis">
+        <xs:annotation>
+            <xs:documentation>
+                Root container for the MIABIS sample exchange format data.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="sample" type="Sample" minOccurs="0" maxOccurs="unbounded">
+                    <xs:annotation>
+                        <xs:documentation>
+                        Set of Samples
+                        </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+	
 </xs:schema>
