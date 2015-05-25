@@ -5,7 +5,7 @@
            targetNamespace="http://www.bbmri-eric.eu/miabis"
            elementFormDefault="qualified"
            attributeFormDefault="unqualified">
-
+	
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
 
     <xs:simpleType name="Age">
@@ -785,7 +785,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="juristicPerson" type="xs:string">
+            <!--  <xs:element name="juristicPerson" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-05: Textual string of letters denoting the
@@ -793,7 +793,7 @@
                         council etc. for the biobank.
                     </xs:documentation>
                 </xs:annotation>
-            </xs:element>
+            </xs:element> -->
             <xs:element name="country" type="Country">
                 <xs:annotation>
                     <xs:documentation>
@@ -1060,7 +1060,8 @@
         </xs:sequence>
     </xs:complexType>
 
-	<xs:complexType name="Sample">
+	<xs:element name="sample">
+		<xs:complexType>
 		<xs:sequence>
 			<xs:element name="id" type="xs:ID">
 		        	<xs:annotation>
@@ -1129,7 +1130,8 @@
                     </xs:annotation>
                 </xs:element>
 		    </xs:sequence>
-		</xs:complexType>
+		    </xs:complexType>
+		</xs:element>
 	
 	<xs:element name="miabis">
         <xs:annotation>
@@ -1139,7 +1141,7 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="sample" type="Sample" minOccurs="0" maxOccurs="unbounded">
+                <xs:element ref="sample" minOccurs="0" maxOccurs="unbounded">
                     <xs:annotation>
                         <xs:documentation>
                         Set of Samples
