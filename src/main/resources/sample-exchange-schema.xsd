@@ -736,7 +736,7 @@
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="country" type="xs:IDREF">
+                <xs:element name="country" type="Country">
                     <xs:annotation>
                         <xs:documentation>
                             MIABIS-2.0-07-H: Country of the Contact person.
@@ -802,7 +802,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="contactInformation" type="xs:IDREFS">
+            <xs:element name="contactInformation" type="ContactInformation" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-07: Contact information for the contact
@@ -852,7 +852,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="contactInformation" type="xs:IDREFS">
+            <xs:element name="contactInformation" type="ContactInformation" minOccurs="0" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-07: Contact information to the contact person
@@ -1049,7 +1049,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="contactInformation" type="xs:IDREFS">
+            <xs:element name="contactInformation" type="ContactInformation" minOccurs="2" maxOccurs="unbounded">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-07: Contact information to the contact person for
