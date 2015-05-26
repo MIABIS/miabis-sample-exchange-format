@@ -33,6 +33,16 @@ public class SampleMarshallerTest {
 	     biobank.setDescription("Test biobank");
 	     biobank.setName("Test");
 	     
+	     ContactInformation ci = new ContactInformation();
+	     ci.setId("1");
+	     ci.setCity("Munich");
+	     ci.setCountry("DE");
+	     ci.setFirstname("Pepito");
+	     ci.setLastname("Perez");
+	     ci.setAddress("pepito@hotmail.com");
+	     
+	     biobank.getContactInformation().add(ci);
+	     
 	     Sample sample = new Sample();
 	     sample.setBiobank(biobank);
 	     
