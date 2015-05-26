@@ -10,56 +10,10 @@
         <jaxb:schemaBindings>
             <jaxb:package name="org.miabis.exchange.schema" />
         </jaxb:schemaBindings>
-<!--        <jaxb:bindings node="//xsd:element[@name='miabis']">
-            <jaxb:bindings node=".//xsd:element[@name='disease']">
-                <jaxb:property>
-                    <jaxb:baseType name="Disease" />
-                </jaxb:property>
-            </jaxb:bindings>
-            <jaxb:bindings node=".//xsd:element[@name='contactInformation']">
-                <jaxb:property>
-                    <jaxb:baseType name="ContactInformation" />
-                </jaxb:property>
-            </jaxb:bindings>
-            <jaxb:bindings node=".//xsd:element[@name='biobank']">
-                <jaxb:property>
-                    <jaxb:baseType name="Biobank" />
-                </jaxb:property>
-            </jaxb:bindings>
-            <jaxb:bindings node=".//xsd:element[@name='study']">
-                <jaxb:property>
-                    <jaxb:baseType name="Study" />
-                </jaxb:property>
-            </jaxb:bindings>
-            <jaxb:bindings node=".//xsd:element[@name='samplecollection']">
-                <jaxb:property>
-                    <jaxb:baseType name="SampleCollection" />
-                </jaxb:property>
-            </jaxb:bindings>
-        </jaxb:bindings>-->
         <jaxb:bindings node="xsd:complexType[@name='SampleCollection']">
             <jaxb:bindings node=".//xsd:element[@name='diseases']">
                 <jaxb:property>
                     <jaxb:baseType name="Disease" />
-                </jaxb:property>
-            </jaxb:bindings>
-            <jaxb:bindings node=".//xsd:element[@name='contactInformation']">
-                <jaxb:property>
-                    <jaxb:baseType name="ContactInformation" />
-                </jaxb:property>
-            </jaxb:bindings>
-        </jaxb:bindings>
-        <jaxb:bindings node="xsd:complexType[@name='Biobank']">
-            <jaxb:bindings node=".//xsd:element[@name='contactInformation']">
-                <jaxb:property>
-                    <jaxb:baseType name="ContactInformation" />
-                </jaxb:property>
-            </jaxb:bindings>
-        </jaxb:bindings>
-        <jaxb:bindings node="xsd:complexType[@name='Study']">
-            <jaxb:bindings node=".//xsd:element[@name='contactInformation']">
-                <jaxb:property>
-                    <jaxb:baseType name="ContactInformation" />
                 </jaxb:property>
             </jaxb:bindings>
         </jaxb:bindings>
