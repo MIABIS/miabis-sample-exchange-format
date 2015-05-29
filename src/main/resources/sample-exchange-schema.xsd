@@ -8,6 +8,18 @@
 	
     <xs:import namespace="http://www.w3.org/XML/1998/namespace"/>
 
+	<xs:simpleType name="Integer">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:maxInclusive value="2147483647">
+                <xs:annotation>
+                    <xs:documentation>
+                        The maximum value is limited to the maximum value an 32 bit integer can hold.
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="Age">
         <xs:restriction base="xs:positiveInteger">
             <xs:maxInclusive value="54750">
@@ -914,7 +926,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="totalNumberOfParticipants" type="xs:positiveInteger">
+            <xs:element name="totalNumberOfParticipants" type="Integer">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-20: Total number of individuals recruited to the
@@ -922,7 +934,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="totalNumberOfDonors" type="xs:positiveInteger">
+            <xs:element name="totalNumberOfDonors" type="Integer">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-21: Total number of individuals with biological
