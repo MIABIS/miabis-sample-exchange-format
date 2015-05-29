@@ -88,8 +88,8 @@ public class SampleMarshallerTest {
 		 study.setDescription("description for study one");
 		 study.setName("Study one");
 		 study.setId("1");
-		 study.setTotalNumberOfDonors(BigInteger.valueOf(new Integer(500).intValue()));
-		 study.setTotalNumberOfParticipants(BigInteger.valueOf(new Integer(500).intValue()));
+		 study.setTotalNumberOfDonors(500);
+		 study.setTotalNumberOfParticipants(500);
 		 
 	     Sample sample = new Sample();
 	     sample.setStudy(study);
