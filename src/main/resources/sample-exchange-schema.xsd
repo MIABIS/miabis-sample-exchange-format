@@ -55,7 +55,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:anyURI">
-            <xs:pattern value="^(http|https)://.+"/>
+            <xs:pattern value="(http|https)://.+"/>
         </xs:restriction>
     </xs:simpleType>
 
