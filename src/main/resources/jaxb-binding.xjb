@@ -6,6 +6,15 @@
                xmlns:xml="http://www.w3.org/XML/1998/namespace"
                jaxb:extensionBindingPrefixes="ai">
 
+	<jaxb:globalBindings>
+		<jaxb:javaType
+	        name="java.time.LocalDateTime"
+	        xmlType="xs:dateTime"
+	        parseMethod="org.miabis.exchange.util.XsdDateTimeConverter.unmarshal"
+	        printMethod="org.miabis.exchange.util.XsdDateTimeConverter.marshalDateTime"
+        />
+	</jaxb:globalBindings>
+
     <jaxb:bindings schemaLocation="sample-exchange-schema.xsd" node="/xsd:schema">
         <jaxb:schemaBindings>
             <jaxb:package name="org.miabis.exchange.schema" />
