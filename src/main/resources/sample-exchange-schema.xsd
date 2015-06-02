@@ -1123,19 +1123,19 @@
 	                </xs:annotation>
 	            </xs:element>
 	            
-	            <xs:element name="biobank" type="Biobank">
+	            <xs:element name="biobank" type="Biobank" nillable="true">
                     <xs:annotation>
                         <xs:documentation>
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="samplecollection" type="SampleCollection">
+                <xs:element name="samplecollection" type="SampleCollection" nillable="true">
                     <xs:annotation>
                         <xs:documentation>
                         </xs:documentation>
                     </xs:annotation>
                 </xs:element>
-                <xs:element name="study" type="Study">
+                <xs:element name="study" type="Study" nillable="true">
                     <xs:annotation>
                         <xs:documentation>
                         </xs:documentation>
