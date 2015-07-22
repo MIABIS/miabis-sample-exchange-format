@@ -1089,7 +1089,7 @@
 		                </xs:documentation>
 		            </xs:annotation>
 		        </xs:element>
-		        <xs:element name="materialType" type="MaterialType" minOccurs="0" maxOccurs="15" nillable="true">
+		        <xs:element name="materialType" type="MaterialType" nillable="true">
 		        	<xs:annotation>
 	                    <xs:documentation>
 	                        MIABIS-2.0-14: The biospecimen saved from a biological
@@ -1098,7 +1098,7 @@
 	                    </xs:documentation>
                 	</xs:annotation>
 		        </xs:element>
-		        <xs:element name="storageTemperature" type="Temperature" minOccurs="0" maxOccurs="6" nillable="true">
+		        <xs:element name="storageTemperature" type="Temperature" nillable="true">
 	                <xs:annotation>
 	                    <xs:documentation>
 	                        MIABIS-2.0-15: The long term storage temperature a
