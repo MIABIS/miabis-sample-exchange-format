@@ -1029,23 +1029,6 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="materialType" type="MaterialType" maxOccurs="16">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-14: The biospecimen saved from a biological
-                        entity for propagation e.g. testing, diagnostics,
-                        treatment or research purposes.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="storageTemperature" type="Temperature" maxOccurs="6">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-15: The long term storage temperature a
-                        the samples are stored after preparation.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
             <xs:element name="collectionType" type="CollectionType" maxOccurs="10">
                 <xs:annotation>
                     <xs:documentation>
