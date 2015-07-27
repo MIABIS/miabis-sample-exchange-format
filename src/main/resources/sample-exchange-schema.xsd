@@ -1027,7 +1027,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="diseases" type="xs:IDREFS">
+            <xs:element name="diseases" type="xs:IDREFS" maxOccurs="10">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-17: The diseases of main interest in the sample
