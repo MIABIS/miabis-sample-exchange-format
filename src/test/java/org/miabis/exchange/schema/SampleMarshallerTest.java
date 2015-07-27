@@ -1,6 +1,5 @@
 package org.miabis.exchange.schema;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 
 import javax.xml.bind.JAXBContext;
