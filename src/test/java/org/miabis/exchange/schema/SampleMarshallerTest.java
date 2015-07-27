@@ -41,7 +41,7 @@ public class SampleMarshallerTest {
 	     ci.setLastname("Perez");
 	     ci.setAddress("pepito@hotmail.com");
 	     
-	     biobank.getContactInformation().add(ci);
+	     biobank.setContactInformation(ci);
 	     
 	     Sample sample = new Sample();
 	     sample.setBiobank(biobank);

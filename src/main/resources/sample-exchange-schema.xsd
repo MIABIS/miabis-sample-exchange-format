@@ -797,7 +797,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <!--  <xs:element name="juristicPerson" type="xs:string">
+            <xs:element name="juristicPerson" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-05: Textual string of letters denoting the
@@ -805,7 +805,7 @@
                         council etc. for the biobank.
                     </xs:documentation>
                 </xs:annotation>
-            </xs:element> -->
+            </xs:element>
             <xs:element name="country" type="Country">
                 <xs:annotation>
                     <xs:documentation>
@@ -814,7 +814,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="contactInformation" type="ContactInformation" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="contactInformation" type="ContactInformation" nillable="true">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-07: Contact information for the contact
@@ -856,7 +856,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="principalInvestigator" type="xs:string" maxOccurs="unbounded">
+            <xs:element name="principalInvestigator" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-18: The name of the person responsible for the
@@ -864,7 +864,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="contactInformation" type="ContactInformation" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="contactInformation" type="ContactInformation" nillable="true">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-07: Contact information to the contact person
@@ -917,15 +917,6 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="materialType" type="MaterialType" maxOccurs="15">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-14: The biospecimen saved from a biological
-                        entity for propagation e.g. testing, diagnostics,
-                        treatment or research purposes.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
             <xs:element name="totalNumberOfParticipants" type="Integer">
                 <xs:annotation>
                     <xs:documentation>
@@ -960,7 +951,7 @@
                 MIABIS Sample Collection.
             </xs:documentation>
         </xs:annotation>
-        <xs:sequence minOccurs="0" maxOccurs="1">
+        <xs:sequence>
             <xs:element name="id" type="xs:ID">
                 <xs:annotation>
                     <xs:documentation>
@@ -1044,7 +1035,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="contactInformation" type="ContactInformation" minOccurs="2" maxOccurs="unbounded">
+            <xs:element name="contactInformation" type="ContactInformation" nillable="true">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-07: Contact information to the contact person for
