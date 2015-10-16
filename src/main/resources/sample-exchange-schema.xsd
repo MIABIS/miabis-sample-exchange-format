@@ -842,6 +842,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
@@ -849,6 +850,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="description" type="text">
                 <xs:annotation>
                     <xs:documentation>
@@ -856,7 +858,8 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="principalInvestigator" type="xs:string">
+            
+            <xs:element name="principalInvestigator" type="ContactInformation" nillable="true">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-18: The name of the person responsible for the
@@ -864,6 +867,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="contactInformation" type="ContactInformation" nillable="true">
                 <xs:annotation>
                     <xs:documentation>
@@ -872,6 +876,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="studyDesign" type="CollectionType" maxOccurs="10">
                 <xs:annotation>
                     <xs:documentation>
@@ -879,36 +884,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="sex" type="Sex" maxOccurs="4">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-09: The sex of the study participants.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="ageLow" type="Age">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-10: Age of the youngest study participant at time
-                        of inclusion.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="ageHigh" type="Age">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-11: Age of the oldest study participant at time
-                        of inclusion.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="ageUnit" type="TimeUnit">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-12: Unit defining Age Low and Age High.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
+            
             <xs:element name="dataCategory" type="DataCategory" maxOccurs="8">
                 <xs:annotation>
                     <xs:documentation>
@@ -917,6 +893,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="totalNumberOfParticipants" type="Integer">
                 <xs:annotation>
                     <xs:documentation>
@@ -925,6 +902,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="totalNumberOfDonors" type="Integer">
                 <xs:annotation>
                     <xs:documentation>
@@ -933,6 +911,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="inclusionCriteria" type="InclusionCriteria" maxOccurs="12">
                 <xs:annotation>
                     <xs:documentation>
@@ -942,6 +921,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+        
         </xs:sequence>
     </xs:complexType>
 
@@ -952,6 +932,7 @@
             </xs:documentation>
         </xs:annotation>
         <xs:sequence>
+            
             <xs:element name="id" type="xs:ID">
                 <xs:annotation>
                     <xs:documentation>
@@ -960,6 +941,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="acronym" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
@@ -967,6 +949,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="name" type="xs:string">
                 <xs:annotation>
                     <xs:documentation>
@@ -974,6 +957,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="description" type="text">
                 <xs:annotation>
                     <xs:documentation>
@@ -981,37 +965,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="sex" type="Sex" maxOccurs="4">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-09: The sex of the individuals in the sample
-                        collection.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="ageLow" type="Age">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-10: Age of youngest sample donor at time of
-                        sample donation.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="ageHigh" type="Age">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-11: Age of oldest sample donor at time of sample
-                        donation.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
-            <xs:element name="ageUnit" type="TimeUnit">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-12: Unit defining Age Low and Age High.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
+            
             <xs:element name="dataCategory" type="DataCategory" maxOccurs="8">
                 <xs:annotation>
                     <xs:documentation>
@@ -1020,6 +974,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
+            
             <xs:element name="collectionType" type="CollectionType" maxOccurs="10">
                 <xs:annotation>
                     <xs:documentation>
@@ -1027,14 +982,7 @@
                     </xs:documentation>
                 </xs:annotation>
             </xs:element>
-            <xs:element name="diseases" type="xs:IDREFS" maxOccurs="10">
-                <xs:annotation>
-                    <xs:documentation>
-                        MIABIS-2.0-17: The diseases of main interest in the sample
-                        collection, if any.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:element>
+            
             <xs:element name="contactInformation" type="ContactInformation" nillable="true">
                 <xs:annotation>
                     <xs:documentation>
@@ -1049,6 +997,7 @@
 	<xs:element name="sample">
 		<xs:complexType>
 			<xs:sequence>
+				
 				<xs:element name="id" type="xs:ID">
 		        	<xs:annotation>
 		            	<xs:documentation>
@@ -1056,6 +1005,7 @@
 		                </xs:documentation>
 		            </xs:annotation>
 		        </xs:element>
+		        
 		        <xs:element name="parentSampleId" type="xs:ID">
 		        	<xs:annotation>
 		            	<xs:documentation>
@@ -1063,6 +1013,7 @@
 		                </xs:documentation>
 		            </xs:annotation>
 		        </xs:element>
+		        
 		        <xs:element name="materialType" type="MaterialType" nillable="true">
 		        	<xs:annotation>
 	                    <xs:documentation>
@@ -1072,6 +1023,7 @@
 	                    </xs:documentation>
                 	</xs:annotation>
 		        </xs:element>
+		        
 		        <xs:element name="storageTemperature" type="Temperature" nillable="true">
 	                <xs:annotation>
 	                    <xs:documentation>
@@ -1080,10 +1032,27 @@
 	                    </xs:documentation>
 	                </xs:annotation>
 	            </xs:element>
+	            
 	            <xs:element name="anatomicalSite" type="OntologyTerm" nillable="true">
 	                <xs:annotation>
 	                    <xs:documentation>
 	                        MIABIS-44: The anatomical position of the body where the solid sample was taken from.
+	                    </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            
+	            <xs:element name="disease" type="OntologyTerm" nillable="true">
+	                <xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-2.0-17: The disease in the sample, if any.
+	                    </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            
+	            <xs:element name="sex" type="Sex" nillable="true">
+	                <xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-2.0-09: The sex of the sample.
 	                    </xs:documentation>
 	                </xs:annotation>
 	            </xs:element>
@@ -1093,6 +1062,32 @@
 	                    <xs:documentation>
 	                        MIABIS-43: The time when the sample is taken according to ISO 8601 i.e. YYYYMMDDThhmm
 	                    	TODO : is not based on ISO
+	                    </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            
+	            <xs:element name="ageLow" type="Age">
+	                <xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-2.0-10: Age of the youngest study participant at time
+	                        of inclusion.
+	                    </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            
+	            <xs:element name="ageHigh" type="Age">
+	                <xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-2.0-11: Age of the oldest study participant at time
+	                        of inclusion.
+	                    </xs:documentation>
+	                </xs:annotation>
+	            </xs:element>
+	            
+	            <xs:element name="ageUnit" type="TimeUnit">
+	                <xs:annotation>
+	                    <xs:documentation>
+	                        MIABIS-2.0-12: Unit defining Age Low and Age High.
 	                    </xs:documentation>
 	                </xs:annotation>
 	            </xs:element>

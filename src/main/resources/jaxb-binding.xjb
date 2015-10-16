@@ -19,13 +19,13 @@
         <jaxb:schemaBindings>
             <jaxb:package name="org.miabis.exchange.schema" />
         </jaxb:schemaBindings>
-        <jaxb:bindings node="xsd:complexType[@name='SampleCollection']">
+        <!--  <jaxb:bindings node="xsd:complexType[@name='SampleCollection']">
             <jaxb:bindings node=".//xsd:element[@name='diseases']">
                 <jaxb:property>
                     <jaxb:baseType name="Disease" />
                 </jaxb:property>
             </jaxb:bindings>
-        </jaxb:bindings>
+        </jaxb:bindings>-->
         
         <jaxb:bindings node="xsd:simpleType[@name='Temperature']">
         	<jaxb:bindings node="xsd:restriction/xsd:enumeration[@value='2&#xB0;C to 10&#xB0;C']">
