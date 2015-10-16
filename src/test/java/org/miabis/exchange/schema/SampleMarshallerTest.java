@@ -58,9 +58,6 @@ public class SampleMarshallerTest {
 		 
 		 SampleCollection sCollection = new SampleCollection();
 		 sCollection.setAcronym("Sample colletion acronym");
-		 sCollection.setAgeHigh(50);
-		 sCollection.setAgeLow(10);
-		 sCollection.setAgeUnit(TimeUnit.YEAR);
 	     sCollection.setDescription("This is a sample collection");
 	     sCollection.setId("1");
 	     sCollection.setName("Sample collection 1");
@@ -81,9 +78,6 @@ public class SampleMarshallerTest {
 	 public void testMarshalSudy() throws JAXBException { 
 		 
 		 Study study = new Study();
-		 study.setAgeHigh(10);
-		 study.setAgeLow(5);
-		 study.setAgeUnit(TimeUnit.WEEK);
 		 study.setDescription("description for study one");
 		 study.setName("Study one");
 		 study.setId("1");
@@ -91,6 +85,36 @@ public class SampleMarshallerTest {
 		 study.setTotalNumberOfParticipants(500);
 		 
 	     Sample sample = new Sample();
+	     sample.setStudy(study);
+	     
+	     Miabis miabis = new Miabis();
+	     miabis.sample = new ArrayList<Sample>();
+	     miabis.sample.add(sample);
+	     
+	     System.out.println("\n");
+	     marshaller.marshal(miabis, System.out);
+		 
+	 }
+	 
+	 @Test
+	 public void testMarshalSample() throws JAXBException { 
+		 
+		 Study study = new Study();
+		 study.setDescription("description for study one");
+		 study.setName("Study one");
+		 study.setId("1");
+		 study.setTotalNumberOfDonors(500);
+		 study.setTotalNumberOfParticipants(500);
+		 
+		 Disease disease = new Disease();
+		 disease.setCode("code");
+		 disease.setDescription("Desc");
+		 disease.setId("001");
+		 disease.setOntology("EFO");
+		 disease.setVersion("");
+		 
+	     Sample sample = new Sample();
+	     sample.setDisease(disease);
 	     sample.setStudy(study);
 	     
 	     Miabis miabis = new Miabis();
