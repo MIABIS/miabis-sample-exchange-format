@@ -357,58 +357,7 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="Temperature">
-        <xs:annotation>
-            <xs:documentation>
-                MIABIS-2.0-15: Enumeration of the valid storage temperatures in
-                a sample collection or study.
-            </xs:documentation>
-        </xs:annotation>
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="RT">
-                <xs:annotation>
-                    <xs:documentation>
-                        Storage at room temperature.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="2&#xB0;C to 10&#xB0;C">
-                <xs:annotation>
-                    <xs:documentation>
-                        Storage between 2&#xB0;C and 10&#xB0;C.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="-18&#xB0;C to -35&#xB0;C">
-                <xs:annotation>
-                    <xs:documentation>
-                        Storage between -18&#xB0;C and -35&#xB0;C.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="-60&#xB0;C to -85&#xB0;C">
-                <xs:annotation>
-                    <xs:documentation>
-                        Storage between -60&#xB0;C and -85&#xB0;C.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="LN">
-                <xs:annotation>
-                    <xs:documentation>
-                        Storage in liquid nitrogen, -150&#xB0;C to -196&#xB0;C.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-            <xs:enumeration value="Other">
-                <xs:annotation>
-                    <xs:documentation>
-                        Any other temperature or long time storage information.
-                    </xs:documentation>
-                </xs:annotation>
-            </xs:enumeration>
-        </xs:restriction>
-    </xs:simpleType>
+    
 
     <xs:simpleType name="Sex">
         <xs:annotation>
@@ -859,7 +808,7 @@
                 </xs:annotation>
             </xs:element>
             
-            <xs:element name="principalInvestigator" type="ContactInformation" nillable="true">
+            <xs:element name="principalInvestigator" type="text" nillable="true">
                 <xs:annotation>
                     <xs:documentation>
                         MIABIS-2.0-18: The name of the person responsible for the
@@ -1032,7 +981,7 @@
                 	</xs:annotation>
 		        </xs:element>
 		        
-		        <xs:element name="storageTemperature" type="Temperature" nillable="true">
+		        <xs:element name="storageTemperature" type="xs:int" nillable="true">
 	                <xs:annotation>
 	                    <xs:documentation>
 	                        MIABIS-2.0-15: The long term storage temperature a
